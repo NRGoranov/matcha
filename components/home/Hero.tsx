@@ -5,14 +5,21 @@ import { MapPin, ArrowRight } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-matcha-50 via-cream-50 to-earth-50 relative">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0 w-full h-full">
+        <div className="w-full h-full bg-gradient-to-br from-matcha-50 via-cream-50 to-earth-50 relative overflow-hidden">
+          {/* Mobile Image */}
+          <img
+            src="/HeroMobile.png"
+            alt="Premium matcha cans ready to drink"
+            className="w-full h-full object-cover md:hidden min-w-full min-h-full"
+          />
+          {/* Desktop Image */}
           <img
             src="/Hero.png"
             alt="Premium matcha cans ready to drink"
-            className="w-full h-full object-cover"
+            className="hidden md:block w-full h-full object-cover min-w-full min-h-full"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20"></div>
         </div>
@@ -21,12 +28,12 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom text-white">
+      <div className="relative z-10 container-custom text-white w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-2xl sm:max-w-3xl -ml-8 sm:-ml-16 md:-ml-32 lg:-ml-48 xl:-ml-64 text-left"
+          className="max-w-2xl sm:max-w-3xl text-left px-4 sm:px-6 lg:px-8"
         >
           <motion.h1 
             className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 leading-tight"
@@ -40,7 +47,7 @@ export default function Hero() {
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl mb-8 text-cream-100 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl mb-8 text-cream-100 max-w-2xl leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -50,7 +57,7 @@ export default function Hero() {
           </motion.p>
           
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-start items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-start items-center pr-24 sm:pr-28 md:pr-36 lg:pr-40"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}

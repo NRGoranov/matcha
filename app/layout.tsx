@@ -37,8 +37,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`} style={{ overflowX: 'hidden' }}>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      </head>
+      <body className="font-sans antialiased" style={{ overflowX: 'hidden', width: '100%' }}>
         {children}
       </body>
     </html>

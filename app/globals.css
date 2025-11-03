@@ -6,11 +6,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #1a1a1a;
   }
   
   body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
   }
   
   h1, h2, h3, h4, h5, h6 {
