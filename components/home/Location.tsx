@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { MapPin, Clock, Phone, ArrowRight, Navigation } from 'lucide-react'
+import { MapPin, Clock, Phone, ArrowRight, Navigation, DollarSign } from 'lucide-react'
 
 export default function Location() {
   return (
@@ -36,7 +36,7 @@ export default function Location() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.5!2d23.3219!3d42.6977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sSofia%2C%20Bulgaria!5e0!3m2!1sen!2sbg!4v1634567890123!5m2!1sen!2sbg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.9999999999995!2d23.3397064!3d42.6951668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8500319d6e95%3A0x617e44d4ea9917c0!2sMatcha%20M%C5%8Dt%C5%8D!5e0!3m2!1sen!2sus!4v1703700000000!5m2!1sen!2sus"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
@@ -82,8 +82,8 @@ export default function Location() {
                     <div>
                       <p className="font-semibold text-earth-800">Address</p>
                       <p className="text-earth-600">
-                        Vitosha Boulevard 123<br />
-                        Sofia 1000, Bulgaria
+                        ul. "Vasil Aprilov" 5<br />
+                        Sofia Center, 1504 Sofia, Bulgaria
                       </p>
                     </div>
                   </div>
@@ -93,8 +93,7 @@ export default function Location() {
                     <div>
                       <p className="font-semibold text-earth-800">Hours</p>
                       <p className="text-earth-600">
-                        Mon - Fri: 7:00 AM - 8:00 PM<br />
-                        Sat - Sun: 8:00 AM - 9:00 PM
+                        Daily: Open until 7:00 PM
                       </p>
                     </div>
                   </div>
@@ -104,11 +103,21 @@ export default function Location() {
                     <div>
                       <p className="font-semibold text-earth-800">Contact</p>
                       <a 
-                        href="tel:+359881234567"
+                        href="tel:+359886818188"
                         className="text-earth-600 hover:text-matcha-600 transition-colors duration-300"
                       >
-                        +359 88 123 4567
+                        088 681 8188
                       </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <DollarSign className="w-6 h-6 text-matcha-600 mt-1" />
+                    <div>
+                      <p className="font-semibold text-earth-800">Price Range</p>
+                      <p className="text-earth-600">
+                        BGN 10–20 per person
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -140,7 +149,7 @@ export default function Location() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <button 
-                  onClick={() => window.open('https://maps.google.com/?q=Vitosha+Boulevard+123,+Sofia,+Bulgaria', '_blank')}
+                  onClick={() => window.open('https://maps.app.goo.gl/aeezbE7QEVmyTSfu9', '_blank')}
                   className="btn-primary text-lg px-10 py-5 flex items-center justify-center gap-2 group"
                 >
                   <Navigation className="w-5 h-5" />
@@ -148,7 +157,7 @@ export default function Location() {
                 </button>
                 
                 <button 
-                  onClick={() => window.open('tel:+359881234567', '_self')}
+                  onClick={() => window.open('tel:+359886818188', '_self')}
                   className="btn-secondary text-lg px-10 py-5 flex items-center justify-center gap-2 group"
                 >
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

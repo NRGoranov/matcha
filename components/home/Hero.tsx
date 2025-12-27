@@ -71,7 +71,7 @@ export default function Hero() {
             </button>
             
             <button 
-              onClick={() => window.open('https://maps.google.com/?q=Vitosha+Boulevard+123,+Sofia,+Bulgaria', '_blank')}
+              onClick={() => window.open('https://maps.app.goo.gl/aeezbE7QEVmyTSfu9', '_blank')}
               className="btn-secondary text-lg px-10 py-5 flex items-center gap-2 group"
             >
               <MapPin className="w-5 h-5" />

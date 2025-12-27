@@ -6,21 +6,15 @@ import { Star, Quote, Instagram, Users } from 'lucide-react'
 export default function Experience() {
   const testimonials = [
     {
-      name: "Maria Petrova",
-      role: "Digital Designer",
-      content: "Finally, premium matcha in a can! Perfect for my busy mornings in Sofia - just grab and go.",
+      name: "Iana Pitekova",
+      role: "Local Guide · 47 reviews",
+      content: "Very sweet spot for matcha lovers. They have a variety of matcha and hojicha drinks with a lots of flavours. I tried their banana cloud matcha latte and it was very good! They make the banana cream themselves. The girls are very sweet and friendly. It's definitely a matcha place with a modern touch of the traditional matcha drink.",
       rating: 5
     },
     {
-      name: "Alex Dimitrov",
-      role: "Tech Entrepreneur",
-      content: "The canned matcha is incredible - no crash, just pure focus. This is my new go-to drink.",
-      rating: 5
-    },
-    {
-      name: "Elena Stoyanova",
-      role: "Yoga Instructor",
-      content: "The quality in these cans is outstanding. You can taste the ceremonial-grade difference immediately.",
+      name: "Vanya Santeva",
+      role: "Local Guide · 7 reviews",
+      content: "I'm uploading some menu photos because they have soooo many options! Yesterday I tried a Pumpkin spice Hojicha with hazelnut milk - it was BOMB - if you're into autumn-y nutty sweet flavours, it's absolutely amazing. I've also tried their cinnamon vanilla honey matcha, it was great:) I recommend this place~ FYI: it's the smolest shop, so takeout is the way to go.",
       rating: 5
     }
   ]
@@ -122,11 +116,11 @@ export default function Experience() {
             What Sofia is Saying
           </h3>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <motion.div 
                 key={index}
-                className="korean-card p-8"
+                className="korean-card p-8 flex-1 min-w-0 max-w-md"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -141,7 +135,7 @@ export default function Experience() {
                 
                 <Quote className="w-8 h-8 text-matcha-300 mb-4" />
                 
-                <p className="text-earth-600 mb-6 italic">
+                <p className="text-earth-600 mb-6 italic leading-relaxed">
                   "{testimonial.content}"
                 </p>
                 
@@ -163,29 +157,34 @@ export default function Experience() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-center gap-8 mb-6">
-            <div className="flex items-center gap-2">
+            <a 
+              href="https://www.instagram.com/thematchamoto/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
               <Instagram className="w-6 h-6 text-matcha-600" />
-              <span className="font-semibold text-earth-800">@matchasofia</span>
-            </div>
+              <span className="font-semibold text-earth-800">@thematchamoto</span>
+            </a>
             <div className="flex items-center gap-2">
               <Users className="w-6 h-6 text-matcha-600" />
-              <span className="font-semibold text-earth-800">2.5k+ Followers</span>
+              <span className="font-semibold text-earth-800">1.2k+ Followers</span>
             </div>
           </div>
           
           <p className="text-earth-600 mb-6">
-            Join our community of canned matcha lovers in Sofia. Share your moments with #MatchaSofia
+            Join our community of matcha lovers in Sofia. Share your moments with #MatchaMoto
           </p>
           
           <div className="flex justify-center gap-4">
             <span className="bg-matcha-100 text-matcha-800 px-4 py-2 rounded-full text-sm font-medium">
+              #MatchaMoto
+            </span>
+            <span className="bg-matcha-100 text-matcha-800 px-4 py-2 rounded-full text-sm font-medium">
               #SofiaMatcha
             </span>
             <span className="bg-matcha-100 text-matcha-800 px-4 py-2 rounded-full text-sm font-medium">
-              #MatchaInACan
-            </span>
-            <span className="bg-matcha-100 text-matcha-800 px-4 py-2 rounded-full text-sm font-medium">
-              #SofiaCoffee
+              #MatchaBar
             </span>
           </div>
         </motion.div>

@@ -1,4 +1,4 @@
-# Matcha Sofia - Premium Matcha Shop Website
+# Matcha Moto - Premium Matcha Shop Website
 
 A highly converting one-page website for a modern matcha shop in Sofia, Bulgaria. Built with Next.js 14, TypeScript, and Tailwind CSS.
 

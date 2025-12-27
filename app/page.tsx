@@ -44,7 +44,7 @@ export default function Home() {
         transition={{ delay: 2 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => window.open('https://maps.google.com/?q=Vitosha+Boulevard+123,+Sofia,+Bulgaria', '_blank')}
+        onClick={() => window.open('https://maps.app.goo.gl/aeezbE7QEVmyTSfu9', '_blank')}
         title="Get Directions"
       >
         <MapPin className="w-6 h-6" />
