@@ -48,17 +48,6 @@ export default function Location() {
               
               {/* Map overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-              
-              {/* Location pin */}
-              <motion.div 
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                <div className="bg-matcha-600 text-white p-3 rounded-full shadow-lg">
-                  <MapPin className="w-6 h-6" />
-                </div>
-              </motion.div>
             </div>
           </motion.div>
 
